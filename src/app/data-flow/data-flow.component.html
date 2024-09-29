@@ -1,0 +1,35 @@
+<p>data-flow works!</p>
+
+<!-- String Interpolation 
+ -->
+<div>
+  {{ name }}
+</div>
+
+<!-- Property Binding -->
+<div [hidden]="isHidden">jkdfghjk</div>
+
+<!-------  diff between  string interpolation and  property binding  ____>
+<!-- This does not work, as interpolation cannot  able  to  click becuase internally it convert boolen into string  -->
+<button disabled="{{isDisabled}}">Click Me via string interpolation</button>
+
+
+<button [disabled]="isDisabled">Click Me via property bind</button>
+
+
+<!-- Style Binding -->
+<h1 [style.color]="rating < 4 ? 'red' : 'green'"> ## </h1>
+
+<!-- Attribute Directive -->
+<div [ngStyle]="jsonS">attribute directive</div>
+
+
+
+
+<!----------   class  binding     -->
+<div [class.success]="Submission === 'success'" 
+     [class.error]="Submission === 'error'" 
+     [class.alert]="Submission === 'alert'">
+  Form Submission Status: {{ statusMessage }}
+</div>
+
