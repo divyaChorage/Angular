@@ -1,0 +1,46 @@
+<p>Event-binding works!</p>
+  <!---  by using event  binding but using template ref var -->
+<!-- <label>Enter first number:</label>
+<input type="number" #num1>
+
+<label>Enter second number:</label>
+<input type="number" #num2>
+
+<button (click)="addition(num1.value, num2.value)">Add</button>
+
+<p>Result: {{ result }}</p> -->
+
+
+
+
+<!----  by using two way data binding -->
+
+<label>Enter first number:</label>
+<input type="number"  [(ngModel)]="num1">
+
+<label>Enter second number:</label>
+<input type="number"  [(ngModel)]="num2">
+
+<button (click)="multi()">mult</button>
+
+<p>Result: {{ multResult }}</p>
+
+
+
+<!----  CLICK  event on image  with  pointer  cursor-->
+<img src="../../assets/IMG_20230407_113801.jpg" (click)="imgClick()">
+
+
+
+
+<!------   change  event  -->
+<h3>Enter a Color Name or Hex Code:</h3>
+
+<!--// if  here  u  use  change  instead  of  input  event  use should press  enter after  writing the color on box;
+-->
+<input type="text" (input)="updateColor($event)" placeholder="e.g., red or #ff0000">
+
+<!-- Box whose background color will change -->
+<div class="color-box" [style.background-color]="boxColor">
+  {{ boxText }}
+</div>
